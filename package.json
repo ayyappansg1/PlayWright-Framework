@@ -1,0 +1,26 @@
+{
+  "name": "final-revision",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright --headed",
+    "regression": "npx playwright test",
+    "webtest": "npx playwright test tests/example.spec.js @web",
+    "apitest": "npx playwright test tests/api.spec.js @API",
+    "regressionAllure": "npx playwright test --config playwright.config1.js --project=chromium --grep=@web --reporter=line,allure-playwright",
+    "cucumberrun":"npx cucumber-js --exit --parallel 2 --format html:cucumber-report.html --retry 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.43.1",
+    "@types/node": "^20.12.7",
+    "allure-playwright": "^2.15.1"
+  },
+  "dependencies": {
+    "@cucumber/cucumber": "^10.6.0",
+    "exceljs": "^4.4.0"
+  }
+}
